@@ -41,7 +41,7 @@ class Adventure(commands.Cog):
 
         try:
             embed = after.embeds[0].to_dict()
-            if "choose items you want to take with you" in embed["title"]:
+            if "choose items you want to take with you" == embed["title"]:
                 await self.bot.click(after, 2, 0)
                 return
         except KeyError:
